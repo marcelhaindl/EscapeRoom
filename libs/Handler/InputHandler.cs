@@ -26,24 +26,32 @@ public sealed class InputHandler
 
     public void Handle(ConsoleKeyInfo keyInfo)
     {
-        GameObject focusedObject = engine.GetPlayer();
+        GameObject player = engine.GetPlayer();
 
-        if (focusedObject != null)
+        if (player != null)
         {
             // Handle keyboard input to move the player
             switch (keyInfo.Key)
             {
                 case ConsoleKey.UpArrow:
-                    focusedObject.Move(0, -1);
+                    player.Move(0, -1);
+                    player.CharRepresentation = '▲';
                     break;
                 case ConsoleKey.DownArrow:
-                    focusedObject.Move(0, 1);
+                    player.Move(0, 1);
+                    player.CharRepresentation = '▼';
                     break;
                 case ConsoleKey.LeftArrow:
-                    focusedObject.Move(-1, 0);
+                    player.Move(-1, 0);
+                    player.CharRepresentation = '◄';
                     break;
                 case ConsoleKey.RightArrow:
-                    focusedObject.Move(1, 0);
+                    player.Move(1, 0);
+                    player.CharRepresentation = '►';
+                    break;
+                case ConsoleKey.Q:
+                    Console.Clear();
+                    Environment.Exit(0);
                     break;
                 default:
                     break;

@@ -4,6 +4,6 @@ public class Exit : GameObject {
     public Exit () : base(){
         Type = GameObjectType.Exit;
         CharRepresentation = '█';
-        Color = ConsoleColor.Yellow;
+        Color = ConsoleColor.Cyan;
     }
 }

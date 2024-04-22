@@ -113,6 +113,8 @@ public sealed class GameEngine
             }
             Console.WriteLine();
         }
+        Console.WriteLine();
+        DrawDialog("Hello you, welcome to Escape Room! Use the arrow keys to move the player. Press 'q' to quit.");
     }
 
 
@@ -152,5 +154,27 @@ public sealed class GameEngine
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write(' ');
         }
+    }
+
+    private void DrawDialog(string message)
+    {
+        int messageLength = message.Length;
+        int borderLength = 38;
+        int totalHeight = 5 + (messageLength / borderLength) * 2;
+
+        Console.WriteLine(new string('+', borderLength + 4));
+
+        Console.WriteLine(string.Format("+ {0,-" + borderLength + "} +", ""));
+
+        for (int i = 0; i < messageLength; i += borderLength)
+        {
+            string line = message.Substring(i, Math.Min(borderLength, messageLength - i));
+            string formattedLine = string.Format("+ {0,-" + borderLength + "} +", line);
+            Console.WriteLine(formattedLine);
+        }
+
+        Console.WriteLine(string.Format("+ {0,-" + borderLength + "} +", ""));
+
+        Console.WriteLine(new string('+', borderLength + 4));
     }
 }
