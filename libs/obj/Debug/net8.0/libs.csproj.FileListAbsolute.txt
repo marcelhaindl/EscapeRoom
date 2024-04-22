@@ -1,0 +1,119 @@
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson06\libs\bin\Debug\net8.0\libs.deps.json
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson06\libs\bin\Debug\net8.0\libs.dll
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson06\libs\bin\Debug\net8.0\libs.pdb
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson06\libs\obj\Debug\net8.0\libs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson06\libs\obj\Debug\net8.0\libs.AssemblyInfoInputs.cache
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson06\libs\obj\Debug\net8.0\libs.AssemblyInfo.cs
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson06\libs\obj\Debug\net8.0\libs.csproj.CoreCompileInputs.cache
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson06\libs\obj\Debug\net8.0\libs.dll
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson06\libs\obj\Debug\net8.0\refint\libs.dll
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson06\libs\obj\Debug\net8.0\libs.pdb
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson06\libs\obj\Debug\net8.0\ref\libs.dll
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson06\libs\obj\Debug\net8.0\libs.csproj.AssemblyReference.cache
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson06\libs\obj\Debug\net8.0\libs.sourcelink.json
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson07\libs\obj\Debug\net8.0\libs.csproj.AssemblyReference.cache
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson07\libs\obj\Debug\net8.0\libs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson07\libs\obj\Debug\net8.0\libs.AssemblyInfoInputs.cache
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson07\libs\obj\Debug\net8.0\libs.AssemblyInfo.cs
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson07\libs\obj\Debug\net8.0\libs.csproj.CoreCompileInputs.cache
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson07\libs\obj\Debug\net8.0\libs.dll
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson07\libs\obj\Debug\net8.0\refint\libs.dll
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson07\libs\obj\Debug\net8.0\libs.pdb
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson07\libs\bin\Debug\net8.0\libs.deps.json
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson07\libs\bin\Debug\net8.0\libs.dll
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson07\libs\bin\Debug\net8.0\libs.pdb
+C:\Users\A200002851\OneDrive - Deutsche Telekom AG\Projects\lesson07\libs\obj\Debug\net8.0\ref\libs.dll
+<<<<<<< HEAD
+C:\Users\admin\Desktop\BCC\fourthSem\CD\sokubanGame\libs\bin\Debug\net8.0\libs.deps.json
+C:\Users\admin\Desktop\BCC\fourthSem\CD\sokubanGame\libs\bin\Debug\net8.0\libs.dll
+C:\Users\admin\Desktop\BCC\fourthSem\CD\sokubanGame\libs\bin\Debug\net8.0\libs.pdb
+C:\Users\admin\Desktop\BCC\fourthSem\CD\sokubanGame\libs\obj\Debug\net8.0\libs.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\BCC\fourthSem\CD\sokubanGame\libs\obj\Debug\net8.0\libs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\BCC\fourthSem\CD\sokubanGame\libs\obj\Debug\net8.0\libs.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\BCC\fourthSem\CD\sokubanGame\libs\obj\Debug\net8.0\libs.AssemblyInfo.cs
+C:\Users\admin\Desktop\BCC\fourthSem\CD\sokubanGame\libs\obj\Debug\net8.0\libs.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\BCC\fourthSem\CD\sokubanGame\libs\obj\Debug\net8.0\libs.sourcelink.json
+C:\Users\admin\Desktop\BCC\fourthSem\CD\sokubanGame\libs\obj\Debug\net8.0\libs.dll
+C:\Users\admin\Desktop\BCC\fourthSem\CD\sokubanGame\libs\obj\Debug\net8.0\refint\libs.dll
+C:\Users\admin\Desktop\BCC\fourthSem\CD\sokubanGame\libs\obj\Debug\net8.0\libs.pdb
+C:\Users\admin\Desktop\BCC\fourthSem\CD\sokubanGame\libs\obj\Debug\net8.0\ref\libs.dll
+=======
+>>>>>>> a0107334cdb57fc0c2bfa855ced4a1975799c06d
+D:\fhstp\04_ss24\csharp_development\SokobanGame\libs\bin\Debug\net8.0\libs.deps.json
+D:\fhstp\04_ss24\csharp_development\SokobanGame\libs\bin\Debug\net8.0\libs.dll
+D:\fhstp\04_ss24\csharp_development\SokobanGame\libs\bin\Debug\net8.0\libs.pdb
+D:\fhstp\04_ss24\csharp_development\SokobanGame\libs\obj\Debug\net8.0\libs.csproj.AssemblyReference.cache
+D:\fhstp\04_ss24\csharp_development\SokobanGame\libs\obj\Debug\net8.0\libs.GeneratedMSBuildEditorConfig.editorconfig
+D:\fhstp\04_ss24\csharp_development\SokobanGame\libs\obj\Debug\net8.0\libs.AssemblyInfoInputs.cache
+D:\fhstp\04_ss24\csharp_development\SokobanGame\libs\obj\Debug\net8.0\libs.AssemblyInfo.cs
+D:\fhstp\04_ss24\csharp_development\SokobanGame\libs\obj\Debug\net8.0\libs.csproj.CoreCompileInputs.cache
+D:\fhstp\04_ss24\csharp_development\SokobanGame\libs\obj\Debug\net8.0\libs.sourcelink.json
+D:\fhstp\04_ss24\csharp_development\SokobanGame\libs\obj\Debug\net8.0\libs.dll
+D:\fhstp\04_ss24\csharp_development\SokobanGame\libs\obj\Debug\net8.0\refint\libs.dll
+D:\fhstp\04_ss24\csharp_development\SokobanGame\libs\obj\Debug\net8.0\libs.pdb
+D:\fhstp\04_ss24\csharp_development\SokobanGame\libs\obj\Debug\net8.0\ref\libs.dll
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-marcel\libs\bin\Debug\net8.0\libs.deps.json
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-marcel\libs\bin\Debug\net8.0\libs.dll
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-marcel\libs\bin\Debug\net8.0\libs.pdb
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-marcel\libs\obj\Debug\net8.0\libs.csproj.AssemblyReference.cache
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-marcel\libs\obj\Debug\net8.0\libs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-marcel\libs\obj\Debug\net8.0\libs.AssemblyInfoInputs.cache
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-marcel\libs\obj\Debug\net8.0\libs.AssemblyInfo.cs
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-marcel\libs\obj\Debug\net8.0\libs.csproj.CoreCompileInputs.cache
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-marcel\libs\obj\Debug\net8.0\libs.dll
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-marcel\libs\obj\Debug\net8.0\refint\libs.dll
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-marcel\libs\obj\Debug\net8.0\libs.pdb
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-marcel\libs\obj\Debug\net8.0\ref\libs.dll
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-Finished_Prblem_Setup json\libs\bin\Debug\net8.0\libs.deps.json
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-Finished_Prblem_Setup json\libs\bin\Debug\net8.0\libs.dll
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-Finished_Prblem_Setup json\libs\bin\Debug\net8.0\libs.pdb
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-Finished_Prblem_Setup json\libs\obj\Debug\net8.0\libs.csproj.AssemblyReference.cache
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-Finished_Prblem_Setup json\libs\obj\Debug\net8.0\libs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-Finished_Prblem_Setup json\libs\obj\Debug\net8.0\libs.AssemblyInfoInputs.cache
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-Finished_Prblem_Setup json\libs\obj\Debug\net8.0\libs.AssemblyInfo.cs
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-Finished_Prblem_Setup json\libs\obj\Debug\net8.0\libs.csproj.CoreCompileInputs.cache
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-Finished_Prblem_Setup json\libs\obj\Debug\net8.0\libs.dll
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-Finished_Prblem_Setup json\libs\obj\Debug\net8.0\refint\libs.dll
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-Finished_Prblem_Setup json\libs\obj\Debug\net8.0\libs.pdb
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame-Finished_Prblem_Setup json\libs\obj\Debug\net8.0\ref\libs.dll
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame_Szabolcs\libs\bin\Debug\net8.0\libs.deps.json
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame_Szabolcs\libs\bin\Debug\net8.0\libs.dll
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame_Szabolcs\libs\bin\Debug\net8.0\libs.pdb
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame_Szabolcs\libs\obj\Debug\net8.0\libs.csproj.AssemblyReference.cache
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame_Szabolcs\libs\obj\Debug\net8.0\libs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame_Szabolcs\libs\obj\Debug\net8.0\libs.AssemblyInfoInputs.cache
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame_Szabolcs\libs\obj\Debug\net8.0\libs.AssemblyInfo.cs
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame_Szabolcs\libs\obj\Debug\net8.0\libs.csproj.CoreCompileInputs.cache
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame_Szabolcs\libs\obj\Debug\net8.0\libs.sourcelink.json
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame_Szabolcs\libs\obj\Debug\net8.0\libs.dll
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame_Szabolcs\libs\obj\Debug\net8.0\refint\libs.dll
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame_Szabolcs\libs\obj\Debug\net8.0\libs.pdb
+C:\Users\Mesza\OneDrive\Desktop\SokobanGame_Szabolcs\libs\obj\Debug\net8.0\ref\libs.dll
+C:\Users\admin\Desktop\BCC\fourthSem\CD\newSokoban\libs\bin\Debug\net8.0\libs.deps.json
+C:\Users\admin\Desktop\BCC\fourthSem\CD\newSokoban\libs\bin\Debug\net8.0\libs.dll
+C:\Users\admin\Desktop\BCC\fourthSem\CD\newSokoban\libs\bin\Debug\net8.0\libs.pdb
+C:\Users\admin\Desktop\BCC\fourthSem\CD\newSokoban\libs\obj\Debug\net8.0\libs.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\BCC\fourthSem\CD\newSokoban\libs\obj\Debug\net8.0\libs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\BCC\fourthSem\CD\newSokoban\libs\obj\Debug\net8.0\libs.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\BCC\fourthSem\CD\newSokoban\libs\obj\Debug\net8.0\libs.AssemblyInfo.cs
+C:\Users\admin\Desktop\BCC\fourthSem\CD\newSokoban\libs\obj\Debug\net8.0\libs.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\BCC\fourthSem\CD\newSokoban\libs\obj\Debug\net8.0\libs.sourcelink.json
+C:\Users\admin\Desktop\BCC\fourthSem\CD\newSokoban\libs\obj\Debug\net8.0\libs.dll
+C:\Users\admin\Desktop\BCC\fourthSem\CD\newSokoban\libs\obj\Debug\net8.0\refint\libs.dll
+C:\Users\admin\Desktop\BCC\fourthSem\CD\newSokoban\libs\obj\Debug\net8.0\libs.pdb
+C:\Users\admin\Desktop\BCC\fourthSem\CD\newSokoban\libs\obj\Debug\net8.0\ref\libs.dll
+>>>>>>> 1384355c0f8eab199c97f58d1c70ee469a5092e3
+>>>>>>> 5b73e3e99fd0c3345aa66f76ca5ff8f2595d6154
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\bin\Debug\net8.0\libs.deps.json
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\bin\Debug\net8.0\libs.dll
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\bin\Debug\net8.0\libs.pdb
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.csproj.AssemblyReference.cache
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.GeneratedMSBuildEditorConfig.editorconfig
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.AssemblyInfoInputs.cache
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.AssemblyInfo.cs
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.csproj.CoreCompileInputs.cache
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.sourcelink.json
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.dll
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\refint\libs.dll
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.pdb
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\ref\libs.dll
