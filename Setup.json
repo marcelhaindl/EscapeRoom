@@ -11,21 +11,30 @@
         "PosX": 37,
         "PosY": 11
     },
-    "notes": [
+    "interactableGameObjects": [
         {
             "PosX": 5,
             "PosY": 5,
-            "text": 3
+            "question": "Q1: What is the result of (int)((5 + 3) % 7)?",
+            "answer": 1
         },
         {
-            "PosX": 5,
-            "PosY": 6,
-            "text": 5
+            "PosX": 10,
+            "PosY": 8,
+            "question": "Q2: What is the result of (int)(((25 - 14) * 2) / 3)?",
+            "answer": 7
         },
         {
-            "PosX": 5,
-            "PosY": 7,
-            "text": 8
+            "PosX": 18,
+            "PosY": 1,
+            "question": "Q3: What is the remainder when 123 is divided by 10 and converted to an integer?",
+            "answer": 3
+        },
+        {
+            "PosX": 30,
+            "PosY": 8,
+            "question": "Q4: What is the last digit of the product of 4 and 9",
+            "answer": 6
         }
     ],
     "walls": [

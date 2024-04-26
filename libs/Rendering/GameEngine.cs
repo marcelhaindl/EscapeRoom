@@ -9,6 +9,7 @@ public sealed class GameEngine
 {
     private static GameEngine? _instance;
     private IGameObjectFactory gameObjectFactory;
+    private string _dialogMessage = "Hello you, welcome to Escape Room! Use the arrow keys to move the player. Press 'q' to quit.";
 
     public static GameEngine Instance
     {
@@ -49,6 +50,15 @@ public sealed class GameEngine
         return _player;
     }
 
+    public void SetDialogMessage(string message)
+    {
+        _dialogMessage = message;
+    }
+    public string GetDialogMessage()
+    {
+        return _dialogMessage;
+    }
+
     public void Setup()
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -71,6 +81,7 @@ public sealed class GameEngine
             dynamic player = gameData.player;
             List<dynamic> walls = new List<dynamic>(gameData.walls);
             dynamic exit = gameData.exit;
+            List<dynamic> interactableGameObjects = new List<dynamic>(gameData.interactableGameObjects);
 
             player.Type = GameObjectType.Player;
             exit.Type = GameObjectType.Exit;
@@ -82,6 +93,12 @@ public sealed class GameEngine
             {
                 wall.Type = GameObjectType.Obstacle;
                 AddGameObject(CreateGameObject(wall));
+            }
+
+            foreach (var interactableGameObject in gameData.interactableGameObjects)
+            {
+                interactableGameObject.Type = GameObjectType.InteractableGameObject;
+                AddGameObject(CreateGameObject(interactableGameObject));
             }
 
             if (_player == null)
@@ -114,7 +131,7 @@ public sealed class GameEngine
             Console.WriteLine();
         }
         Console.WriteLine();
-        DrawDialog("Hello you, welcome to Escape Room! Use the arrow keys to move the player. Press 'q' to quit.");
+        DrawDialog(_dialogMessage);
     }
 
 

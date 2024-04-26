@@ -2,7 +2,7 @@ public enum GameObjectType
 {
   Player,
   Obstacle,
-  Box,
+  InteractableGameObject,
   Floor,
   Exit
 }

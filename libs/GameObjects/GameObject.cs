@@ -13,6 +13,9 @@ public class GameObject : IGameObject, IMovement, ICloneable
     private int _posY;
     public GameObjectType Type;
 
+    public string question = "";
+    public string answer = "";
+
     public GameObject()
     {
         this._posX = 5;
@@ -31,6 +34,15 @@ public class GameObject : IGameObject, IMovement, ICloneable
         this._posX = posX;
         this._posY = posY;
         this.Type = type;
+    }
+
+    public GameObject(int posX, int posY, GameObjectType type, string question, string answer)
+    {
+        this._posX = posX;
+        this._posY = posY;
+        this.Type = type;
+        this.question = question;
+        this.answer = answer;
     }
 
     public object Clone()
@@ -62,13 +74,28 @@ public class GameObject : IGameObject, IMovement, ICloneable
         set { _posY = value; } // Corrected from 'posY' to '_posY'
     }
 
+    public void Interact()
+    {
+        if (Type == GameObjectType.InteractableGameObject)
+        {
+            GameEngine.Instance.SetDialogMessage(question);
+        } else {
+            GameEngine.Instance.SetDialogMessage("This object is not interactable.");
+        }
+    }
 
     public void Move(int dx, int dy)
     {
-        if (GameEngine.Instance.GetMap().Get(_posY + dy, _posX + dx).Type == GameObjectType.Obstacle)
+        if (GameEngine.Instance.GetMap().Get(_posY + dy, _posX + dx).Type == GameObjectType.Obstacle || GameEngine.Instance.GetMap().Get(_posY + dy, _posX + dx).Type == GameObjectType.Exit)
         {
             return;
         }
+        GameEngine.Instance.GetMap().Get(_posY + dy, _posX + dx).Interact();
+        if (GameEngine.Instance.GetMap().Get(_posY + dy, _posX + dx).Type == GameObjectType.InteractableGameObject)
+        {
+            return;
+        }
+
         _posX += dx;
         _posY += dy;
     }
