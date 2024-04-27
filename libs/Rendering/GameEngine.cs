@@ -9,10 +9,12 @@ public sealed class GameEngine
 {
     private static GameEngine? _instance;
     private IGameObjectFactory gameObjectFactory;
-    private string _dialogMessage = "Hello you, welcome to Escape Room! Use the arrow keys to move the player. Press 'q' to quit.";
+    private string _dialogMessage = "Hello you, welcome to Escape Room! Complete the code within the time limit to escape! Use the arrow keys to move. Press q to quit.";
     private string _type = "output";
     public bool won = false;
     private bool initialsPlaced = false;
+    private int _remainingTimeInSeconds = 300;
+    public Thread timerThread;
 
     public static GameEngine Instance
     {
@@ -30,6 +32,7 @@ public sealed class GameEngine
     {
         //INIT PROPS HERE IF NEEDED
         gameObjectFactory = new GameObjectFactory();
+        timerThread = new Thread(CountdownTimer);
     }
 
     private GameObject? _player;
@@ -106,6 +109,8 @@ public sealed class GameEngine
                 AddGameObject(CreateGameObject(interactableGameObject));
             }
 
+            _remainingTimeInSeconds = lengthOfInteractableGameObjects * 30;
+
             GenerateObstacles();
 
             if (_player == null)
@@ -137,6 +142,16 @@ public sealed class GameEngine
             }
             Console.WriteLine();
         }
+        Console.WriteLine();
+        if (_remainingTimeInSeconds < 10)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+        Console.WriteLine("Time Remaining: {0}:{1:00}", _remainingTimeInSeconds / 60, _remainingTimeInSeconds % 60);
         Console.WriteLine();
         DrawDialog(_type, _dialogMessage);
     }
@@ -250,8 +265,9 @@ public sealed class GameEngine
             }
             else
             {
-                SetDialogMessage("output", "Incorrect! Try again.");
+                SetDialogMessage("output", "Incorrect! Try again. Press ENTER to continue.");
                 won = false;
+
             }
             Render();
         }
@@ -291,6 +307,7 @@ public sealed class GameEngine
         List<(int, int)> positionsAroundExit = GetPositionsAroundObject(exitObject);
         // Get Positions Around Player
         List<(int, int)> positionsAroundPlayer = GetPositionsAroundObject(playerObject);
+
         int xPosition = random.Next(1, map.MapWidth - 1);
         int yPosition = random.Next(1, map.MapHeight - 1);
         while (map.Get(yPosition, xPosition).Type != GameObjectType.Floor || positionsAroundExit.Contains((xPosition, yPosition)) || positionsAroundPlayer.Contains((xPosition, yPosition)))
@@ -430,4 +447,25 @@ public sealed class GameEngine
         gameObjects.RemoveAll(obj => obj.PosX == exit.PosX && obj.PosY == exit.PosY);
         AddGameObject(exit);
     }
+    private void CountdownTimer()
+    {
+        // Write and delete the remaining time every second
+        while (_remainingTimeInSeconds > 0)
+        {
+            _remainingTimeInSeconds--;
+            Thread.Sleep(1000);
+            Render();
+        }
+        // If the time is up, the player loses
+        if (_remainingTimeInSeconds == 0)
+        {
+            SetDialogMessage("output", "Time is up! You lose.");
+            Render();
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
+            Environment.Exit(0);
+
+        }
+    }
+
 }
