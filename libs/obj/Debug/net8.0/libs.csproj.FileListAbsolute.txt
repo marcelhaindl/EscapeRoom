@@ -117,3 +117,16 @@ D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\
 D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\refint\libs.dll
 D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.pdb
 D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\ref\libs.dll
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\obj\Debug\net8.0\libs.csproj.AssemblyReference.cache
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\obj\Debug\net8.0\libs.GeneratedMSBuildEditorConfig.editorconfig
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\obj\Debug\net8.0\libs.AssemblyInfoInputs.cache
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\obj\Debug\net8.0\libs.AssemblyInfo.cs
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\obj\Debug\net8.0\libs.csproj.CoreCompileInputs.cache
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\obj\Debug\net8.0\libs.sourcelink.json
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\obj\Debug\net8.0\libs.dll
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\obj\Debug\net8.0\refint\libs.dll
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\obj\Debug\net8.0\libs.pdb
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\bin\Debug\net8.0\libs.deps.json
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\bin\Debug\net8.0\libs.dll
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\bin\Debug\net8.0\libs.pdb
+D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\obj\Debug\net8.0\ref\libs.dll

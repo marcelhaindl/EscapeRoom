@@ -78,11 +78,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\EscapeRoom\\game\\EscapeRoom.csproj",
+      "projectUniqueName": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\game\\EscapeRoom.csproj",
       "projectName": "EscapeRoom",
-      "projectPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\EscapeRoom\\game\\EscapeRoom.csproj",
+      "projectPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\game\\EscapeRoom.csproj",
       "packagesPath": "C:\\Users\\Haind\\.nuget\\packages\\",
-      "outputPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\EscapeRoom\\game\\obj\\",
+      "outputPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\game\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Haind\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -97,8 +97,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\EscapeRoom\\libs\\libs.csproj": {
-              "projectPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\EscapeRoom\\libs\\libs.csproj"
+            "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj": {
+              "projectPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj"
             }
           }
         }

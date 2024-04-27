@@ -7,34 +7,34 @@
         "PosX": 1,
         "PosY": 1
     },
-    "exit": {
-        "PosX": 37,
-        "PosY": 11
-    },
     "interactableGameObjects": [
         {
-            "PosX": 5,
-            "PosY": 5,
-            "question": "Q1: What is the result of (int)((5 + 3) % 7)?",
+            "question": "What is the result of (int)((5 + 3) % 7)?",
             "answer": 1
         },
         {
-            "PosX": 10,
-            "PosY": 8,
-            "question": "Q2: What is the result of (int)(((25 - 14) * 2) / 3)?",
+            "question": "What is the result of (int)(((25 - 14) * 2) / 3)?",
             "answer": 7
         },
         {
-            "PosX": 18,
-            "PosY": 1,
-            "question": "Q3: What is the remainder when 123 is divided by 10 and converted to an integer?",
+            "question": "What is the remainder when 123 is divided by 10 and converted to an integer?",
             "answer": 3
         },
         {
-            "PosX": 30,
-            "PosY": 8,
-            "question": "Q4: What is the last digit of the product of 4 and 9",
+            "question": "What is the last digit of the product of 4 and 9",
             "answer": 6
+        },
+        {
+            "question": "What is the result of (int)(8 / 4)?",
+            "answer": 2
+        },
+        {
+            "question": "What is the remainder when 9 is divided by 4 and converted to an integer?",
+            "answer": 1
+        },
+        {
+            "question": "What is the last digit of the product of 3 and 7?",
+            "answer": 1
         }
     ],
     "walls": [
@@ -116,7 +116,7 @@
         {"PosX": 34, "PosY": 11},
         {"PosX": 35, "PosY": 11},
         {"PosX": 36, "PosY": 11},
-        
+        {"PosX": 37, "PosY": 11},
         {"PosX": 38, "PosY": 11},
         {"PosX": 39, "PosY": 11},
 

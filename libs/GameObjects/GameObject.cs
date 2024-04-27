@@ -13,13 +13,14 @@ public class GameObject : IGameObject, IMovement, ICloneable
     private int _posY;
     public GameObjectType Type;
 
-    public string question = "";
-    public string answer = "";
+    public string question;
+    public string answer;
+    public int idx;
 
     public GameObject()
     {
-        this._posX = 5;
-        this._posY = 5;
+        this._posX = 0;
+        this._posY = 0;
         this._color = ConsoleColor.Gray;
     }
 
@@ -36,13 +37,11 @@ public class GameObject : IGameObject, IMovement, ICloneable
         this.Type = type;
     }
 
-    public GameObject(int posX, int posY, GameObjectType type, string question, string answer)
-    {
-        this._posX = posX;
-        this._posY = posY;
-        this.Type = type;
+    public GameObject(int idx, string question, string answer, GameObjectType type) {
+        this.idx = idx;
         this.question = question;
         this.answer = answer;
+        this.Type = type;
     }
 
     public object Clone()
@@ -58,42 +57,61 @@ public class GameObject : IGameObject, IMovement, ICloneable
 
     public ConsoleColor Color
     {
-        get { return _color; }  // Corrected from 'color' to '_color'
-        set { _color = value; } // Corrected from 'color' to '_color'
+        get { return _color; } 
+        set { _color = value; } 
     }
 
     public int PosX
     {
-        get { return _posX; }  // Corrected from 'posX' to '_posX'
-        set { _posX = value; } // Corrected from 'posX' to '_posX'
+        get { return _posX; } 
+        set { _posX = value; } 
     }
 
     public int PosY
     {
-        get { return _posY; }  // Corrected from 'posY' to '_posY'
-        set { _posY = value; } // Corrected from 'posY' to '_posY'
+        get { return _posY; } 
+        set { _posY = value; } 
     }
+
 
     public void Interact()
     {
         if (Type == GameObjectType.InteractableGameObject)
         {
-            GameEngine.Instance.SetDialogMessage(question);
-        } else {
-            GameEngine.Instance.SetDialogMessage("This object is not interactable.");
+            GameEngine.Instance.SetDialogMessage("output", "Q" + (idx + 1).ToString() + ": " + question);
+        }
+        else if (Type == GameObjectType.Exit)
+        {
+            GameEngine.Instance.SetDialogMessage("input", "Do you know the answer? Type it into the console to escape the room!");
+        }
+        else
+        {
+            GameEngine.Instance.SetDialogMessage("output", "Remember all answers to escape the room!");
         }
     }
 
     public void Move(int dx, int dy)
     {
-        if (GameEngine.Instance.GetMap().Get(_posY + dy, _posX + dx).Type == GameObjectType.Obstacle || GameEngine.Instance.GetMap().Get(_posY + dy, _posX + dx).Type == GameObjectType.Exit)
+        GameEngine.Instance.GetMap().Get(_posY + dy, _posX + dx).Interact();
+        if (GameEngine.Instance.GetMap().Get(_posY + dy, _posX + dx).Type == GameObjectType.Obstacle || GameEngine.Instance.GetMap().Get(_posY + dy, _posX + dx).Type == GameObjectType.InteractableGameObject)
         {
             return;
         }
-        GameEngine.Instance.GetMap().Get(_posY + dy, _posX + dx).Interact();
-        if (GameEngine.Instance.GetMap().Get(_posY + dy, _posX + dx).Type == GameObjectType.InteractableGameObject)
+        if (GameEngine.Instance.GetMap().Get(_posY + dy, _posX + dx).Type == GameObjectType.Exit)
         {
-            return;
+            if (GameEngine.Instance.won)
+            {
+                _posX += dx;
+                _posY += dy;
+                GameEngine.Instance.SetDialogMessage("output", "You have escaped the room! Congratulations!");
+                GameEngine.Instance.Render();
+                Console.ReadKey();
+                Environment.Exit(0);
+            }
+            else
+            {
+                return;
+            }
         }
 
         _posX += dx;

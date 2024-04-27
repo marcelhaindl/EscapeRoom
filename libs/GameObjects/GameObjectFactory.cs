@@ -23,7 +23,6 @@ public class GameObjectFactory : IGameObjectFactory
                 break;
             case (int)GameObjectType.InteractableGameObject:
                 newObj = obj.ToObject<InteractableGameObject>();
-                newObj.
                 break;
             case (int)GameObjectType.Exit:
                 newObj = obj.ToObject<Exit>();
