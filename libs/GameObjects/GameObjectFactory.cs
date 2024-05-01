@@ -21,8 +21,8 @@ public class GameObjectFactory : IGameObjectFactory
             case (int)GameObjectType.Obstacle:
                 newObj = obj.ToObject<Obstacle>();
                 break;
-            case (int)GameObjectType.Box:
-                newObj = obj.ToObject<Box>();
+            case (int)GameObjectType.InteractableGameObject:
+                newObj = obj.ToObject<InteractableGameObject>();
                 break;
             case (int)GameObjectType.Exit:
                 newObj = obj.ToObject<Exit>();

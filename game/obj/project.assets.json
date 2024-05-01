@@ -78,11 +78,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\hoell\\Desktop\\Fourth Semester\\C Sharp\\EscapeRoom\\EscapeRoom\\game\\EscapeRoom.csproj",
       "projectName": "EscapeRoom",
       "projectPath": "C:\\Users\\hoell\\Desktop\\Fourth Semester\\C Sharp\\EscapeRoom\\EscapeRoom\\game\\EscapeRoom.csproj",
       "packagesPath": "C:\\Users\\hoell\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\hoell\\Desktop\\Fourth Semester\\C Sharp\\EscapeRoom\\EscapeRoom\\game\\obj\\",
+=======
+      "projectUniqueName": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\game\\EscapeRoom.csproj",
+      "projectName": "EscapeRoom",
+      "projectPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\game\\EscapeRoom.csproj",
+      "packagesPath": "C:\\Users\\Haind\\.nuget\\packages\\",
+      "outputPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\game\\obj\\",
+>>>>>>> d084ea709176ae9180664f6719ec3a458d50587c
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hoell\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -97,8 +105,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\hoell\\Desktop\\Fourth Semester\\C Sharp\\EscapeRoom\\EscapeRoom\\libs\\libs.csproj": {
               "projectPath": "C:\\Users\\hoell\\Desktop\\Fourth Semester\\C Sharp\\EscapeRoom\\EscapeRoom\\libs\\libs.csproj"
+=======
+            "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj": {
+              "projectPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj"
+>>>>>>> d084ea709176ae9180664f6719ec3a458d50587c
             }
           }
         }

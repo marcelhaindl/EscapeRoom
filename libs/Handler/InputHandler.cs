@@ -5,6 +5,7 @@ public sealed class InputHandler
 
     private static InputHandler? _instance;
     private GameEngine engine;
+    private bool timerStarted = false;
 
     public static InputHandler Instance
     {
@@ -36,18 +37,34 @@ public sealed class InputHandler
                 case ConsoleKey.UpArrow:
                     player.Move(0, -1);
                     player.CharRepresentation = '▲';
+                    if(!timerStarted) {
+                        GameEngine.Instance.timerThread.Start();
+                        timerStarted = true;
+                    }
                     break;
                 case ConsoleKey.DownArrow:
                     player.Move(0, 1);
                     player.CharRepresentation = '▼';
+                    if(!timerStarted) {
+                        GameEngine.Instance.timerThread.Start();
+                        timerStarted = true;
+                    }
                     break;
                 case ConsoleKey.LeftArrow:
                     player.Move(-1, 0);
                     player.CharRepresentation = '◄';
+                    if(!timerStarted) {
+                        GameEngine.Instance.timerThread.Start();
+                        timerStarted = true;
+                    }
                     break;
                 case ConsoleKey.RightArrow:
                     player.Move(1, 0);
                     player.CharRepresentation = '►';
+                    if(!timerStarted) {
+                        GameEngine.Instance.timerThread.Start();
+                        timerStarted = true;
+                    }
                     break;
                 case ConsoleKey.Q:
                     Console.Clear();
