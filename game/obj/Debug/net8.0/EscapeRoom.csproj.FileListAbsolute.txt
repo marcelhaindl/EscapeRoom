@@ -33,3 +33,23 @@ D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\game\bin\Debug\net8.0\
 D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\game\bin\Debug\net8.0\libs.pdb
 D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\EscapeRoom.csproj.AssemblyReference.cache
 D:\fhstp\04_ss24\csharp_development\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\EscapeRoom.csproj.Up2Date
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\bin\Debug\net8.0\EscapeRoom.exe
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\bin\Debug\net8.0\EscapeRoom.deps.json
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\bin\Debug\net8.0\EscapeRoom.runtimeconfig.json
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\bin\Debug\net8.0\EscapeRoom.dll
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\bin\Debug\net8.0\EscapeRoom.pdb
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\bin\Debug\net8.0\libs.dll
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\bin\Debug\net8.0\libs.pdb
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\EscapeRoom.csproj.AssemblyReference.cache
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\EscapeRoom.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\EscapeRoom.AssemblyInfoInputs.cache
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\EscapeRoom.AssemblyInfo.cs
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\EscapeRoom.csproj.CoreCompileInputs.cache
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\EscapeRoom.sourcelink.json
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\EscapeRoom.csproj.Up2Date
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\EscapeRoom.dll
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\refint\EscapeRoom.dll
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\EscapeRoom.pdb
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\EscapeRoom.genruntimeconfig.cache
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\game\obj\Debug\net8.0\ref\EscapeRoom.dll
