@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ldFvTr/2nivPeEai0rpBGeorXt068jEpvPjnHTB7BnD129Jk6AFqqGkIwFp1OK9C7Y9YAGdx3lmZIg8QhMAUGQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Mesza\\OneDrive\\Desktop\\EscapeRoom\\game\\EscapeRoom.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mesza\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
