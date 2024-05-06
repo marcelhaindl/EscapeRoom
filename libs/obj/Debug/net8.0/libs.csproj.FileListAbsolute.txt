@@ -130,3 +130,16 @@ D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\bin\Debug\net8.0\libs.deps.j
 D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\bin\Debug\net8.0\libs.dll
 D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\bin\Debug\net8.0\libs.pdb
 D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\obj\Debug\net8.0\ref\libs.dll
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\libs\bin\Debug\net8.0\libs.deps.json
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\libs\bin\Debug\net8.0\libs.dll
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\libs\bin\Debug\net8.0\libs.pdb
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.csproj.AssemblyReference.cache
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.AssemblyInfoInputs.cache
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.AssemblyInfo.cs
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.csproj.CoreCompileInputs.cache
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.sourcelink.json
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.dll
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\refint\libs.dll
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\libs.pdb
+C:\Users\hoell\Desktop\Fourth Semester\C Sharp\EscapeRoom\EscapeRoom\libs\obj\Debug\net8.0\ref\libs.dll

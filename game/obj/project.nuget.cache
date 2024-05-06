@@ -1,16 +1,17 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "8ztHvCQmRzZ5qKOsKBkQhr24Wtx9rDXVK6OPC1GgkWgfWfl+Ysm8HYqknAqRgZectea8kAhsOr0zYDJMq2B6oA==",
   "success": true,
   "projectFilePath": "C:\\Users\\hoell\\Desktop\\Fourth Semester\\C Sharp\\EscapeRoom\\EscapeRoom\\game\\EscapeRoom.csproj",
-=======
-  "dgSpecHash": "QbCwYi3yFfXQaYR3XwZIxMisT9Cuq+Fndmte50E87E3gqrIUp5B2BA2hPggcSd283kzmL6439zUoExhAeMHQgg==",
-  "success": true,
-  "projectFilePath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\game\\EscapeRoom.csproj",
->>>>>>> d084ea709176ae9180664f6719ec3a458d50587c
   "expectedPackageFiles": [
     "C:\\Users\\hoell\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem beim Lesen der Cachedatei \"C:\\Users\\hoell\\Desktop\\Fourth Semester\\C Sharp\\EscapeRoom\\EscapeRoom\\game\\obj\\project.nuget.cache\": Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

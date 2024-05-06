@@ -34,7 +34,7 @@ public sealed class InputHandler
             // Handle keyboard input to move the player
             switch (keyInfo.Key)
             {
-                case ConsoleKey.UpArrow:
+                case ConsoleKey.W:
                     player.Move(0, -1);
                     player.CharRepresentation = '▲';
                     if(!timerStarted) {
@@ -42,7 +42,7 @@ public sealed class InputHandler
                         timerStarted = true;
                     }
                     break;
-                case ConsoleKey.DownArrow:
+                case ConsoleKey.S:
                     player.Move(0, 1);
                     player.CharRepresentation = '▼';
                     if(!timerStarted) {
@@ -50,7 +50,7 @@ public sealed class InputHandler
                         timerStarted = true;
                     }
                     break;
-                case ConsoleKey.LeftArrow:
+                case ConsoleKey.A:
                     player.Move(-1, 0);
                     player.CharRepresentation = '◄';
                     if(!timerStarted) {
@@ -58,7 +58,7 @@ public sealed class InputHandler
                         timerStarted = true;
                     }
                     break;
-                case ConsoleKey.RightArrow:
+                case ConsoleKey.D:
                     player.Move(1, 0);
                     player.CharRepresentation = '►';
                     if(!timerStarted) {

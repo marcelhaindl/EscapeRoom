@@ -55,19 +55,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Haind\\.nuget\\packages\\": {}
+    "C:\\Users\\hoell\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj",
+      "projectUniqueName": "C:\\Users\\hoell\\Desktop\\Fourth Semester\\C Sharp\\EscapeRoom\\EscapeRoom\\libs\\libs.csproj",
       "projectName": "libs",
-      "projectPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj",
-      "packagesPath": "C:\\Users\\Haind\\.nuget\\packages\\",
-      "outputPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\obj\\",
+      "projectPath": "C:\\Users\\hoell\\Desktop\\Fourth Semester\\C Sharp\\EscapeRoom\\EscapeRoom\\libs\\libs.csproj",
+      "packagesPath": "C:\\Users\\hoell\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hoell\\Desktop\\Fourth Semester\\C Sharp\\EscapeRoom\\EscapeRoom\\libs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Haind\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\hoell\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
