@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gk7Mu30H786aYV8oS1kz75yzVvDzerxujp2xs4EdnfHcptyxfiOARHhgpTTWyKlblLn99U//nbMgpo4HcSeq/w==",
+  "dgSpecHash": "+fa/gUvqiplhsqPBgS6n1FiKw/zsaCGoC/1+MdvIR/0pw5/9r+pv4kNumpM9ChKCZKidxvYP6tv1LmjmH5BSeA==",
   "success": true,
-  "projectFilePath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj",
+  "projectFilePath": "D:\\OverflowFromCDisk\\BCC\\fourthSem\\CD\\escapeRoom\\libs\\libs.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Haind\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

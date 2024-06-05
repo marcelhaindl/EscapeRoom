@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\game\\EscapeRoom.csproj": {}
+    "D:\\OverflowFromCDisk\\BCC\\fourthSem\\CD\\escapeRoom\\game\\EscapeRoom.csproj": {}
   },
   "projects": {
-    "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\game\\EscapeRoom.csproj": {
+    "D:\\OverflowFromCDisk\\BCC\\fourthSem\\CD\\escapeRoom\\game\\EscapeRoom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\game\\EscapeRoom.csproj",
+        "projectUniqueName": "D:\\OverflowFromCDisk\\BCC\\fourthSem\\CD\\escapeRoom\\game\\EscapeRoom.csproj",
         "projectName": "EscapeRoom",
-        "projectPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\game\\EscapeRoom.csproj",
-        "packagesPath": "C:\\Users\\Haind\\.nuget\\packages\\",
-        "outputPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\game\\obj\\",
+        "projectPath": "D:\\OverflowFromCDisk\\BCC\\fourthSem\\CD\\escapeRoom\\game\\EscapeRoom.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\OverflowFromCDisk\\BCC\\fourthSem\\CD\\escapeRoom\\game\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Haind\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj": {
-                "projectPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj"
+              "D:\\OverflowFromCDisk\\BCC\\fourthSem\\CD\\escapeRoom\\libs\\libs.csproj": {
+                "projectPath": "D:\\OverflowFromCDisk\\BCC\\fourthSem\\CD\\escapeRoom\\libs\\libs.csproj"
               }
             }
           }
@@ -36,11 +42,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -62,26 +63,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj": {
+    "D:\\OverflowFromCDisk\\BCC\\fourthSem\\CD\\escapeRoom\\libs\\libs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj",
+        "projectUniqueName": "D:\\OverflowFromCDisk\\BCC\\fourthSem\\CD\\escapeRoom\\libs\\libs.csproj",
         "projectName": "libs",
-        "projectPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj",
-        "packagesPath": "C:\\Users\\Haind\\.nuget\\packages\\",
-        "outputPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\obj\\",
+        "projectPath": "D:\\OverflowFromCDisk\\BCC\\fourthSem\\CD\\escapeRoom\\libs\\libs.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\OverflowFromCDisk\\BCC\\fourthSem\\CD\\escapeRoom\\libs\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Haind\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -94,11 +101,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -126,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

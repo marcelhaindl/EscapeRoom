@@ -130,3 +130,16 @@ D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\bin\Debug\net8.0\libs.deps.j
 D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\bin\Debug\net8.0\libs.dll
 D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\bin\Debug\net8.0\libs.pdb
 D:\fhstp\04_ss24\csharp_development\EscapeRoom\libs\obj\Debug\net8.0\ref\libs.dll
+D:\OverflowFromCDisk\BCC\fourthSem\CD\escapeRoom\libs\bin\Debug\net8.0\libs.deps.json
+D:\OverflowFromCDisk\BCC\fourthSem\CD\escapeRoom\libs\bin\Debug\net8.0\libs.dll
+D:\OverflowFromCDisk\BCC\fourthSem\CD\escapeRoom\libs\bin\Debug\net8.0\libs.pdb
+D:\OverflowFromCDisk\BCC\fourthSem\CD\escapeRoom\libs\obj\Debug\net8.0\libs.csproj.AssemblyReference.cache
+D:\OverflowFromCDisk\BCC\fourthSem\CD\escapeRoom\libs\obj\Debug\net8.0\libs.GeneratedMSBuildEditorConfig.editorconfig
+D:\OverflowFromCDisk\BCC\fourthSem\CD\escapeRoom\libs\obj\Debug\net8.0\libs.AssemblyInfoInputs.cache
+D:\OverflowFromCDisk\BCC\fourthSem\CD\escapeRoom\libs\obj\Debug\net8.0\libs.AssemblyInfo.cs
+D:\OverflowFromCDisk\BCC\fourthSem\CD\escapeRoom\libs\obj\Debug\net8.0\libs.csproj.CoreCompileInputs.cache
+D:\OverflowFromCDisk\BCC\fourthSem\CD\escapeRoom\libs\obj\Debug\net8.0\libs.sourcelink.json
+D:\OverflowFromCDisk\BCC\fourthSem\CD\escapeRoom\libs\obj\Debug\net8.0\libs.dll
+D:\OverflowFromCDisk\BCC\fourthSem\CD\escapeRoom\libs\obj\Debug\net8.0\refint\libs.dll
+D:\OverflowFromCDisk\BCC\fourthSem\CD\escapeRoom\libs\obj\Debug\net8.0\libs.pdb
+D:\OverflowFromCDisk\BCC\fourthSem\CD\escapeRoom\libs\obj\Debug\net8.0\ref\libs.dll
