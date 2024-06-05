@@ -12,9 +12,12 @@ public sealed class GameEngine
     private string _dialogMessage = "Hello you, welcome to Escape Room! Complete the code within the time limit to escape! Use the arrow keys to move. Press q to quit.";
     private string _type = "output";
     public bool won = false;
-    private bool initialsPlaced = false;
     private int _remainingTimeInSeconds = 300;
     public Thread timerThread;
+    private bool _firstStart = true;
+    private int _amountOfRooms = 2; // change the number to adjust the amount of levels
+    private int _currentRoom = 1;
+    public bool timerStarted = false;
 
     public static GameEngine Instance
     {
@@ -30,7 +33,7 @@ public sealed class GameEngine
 
     private GameEngine()
     {
-        //INIT PROPS HERE IF NEEDED
+        // INIT PROPS HERE IF NEEDED
         gameObjectFactory = new GameObjectFactory();
         timerThread = new Thread(CountdownTimer);
     }
@@ -46,7 +49,7 @@ public sealed class GameEngine
         return map;
     }
 
-    public void ClearGameobjects()
+    public void ClearGameObjects()
     {
         gameObjects.Clear();
     }
@@ -73,6 +76,8 @@ public sealed class GameEngine
 
         try
         {
+            ClearGameObjects();
+
             // Correct usage of static class method
             dynamic gameData = FileHandler.ReadJson();
 
@@ -129,6 +134,14 @@ public sealed class GameEngine
     {
         Console.Clear();
 
+        if (_firstStart)
+        {
+            DrawDialog("output", "Welcome to Escape Room! Complete the codes within the time limit to escape the rooms! Use the arrow keys to move. Press q to quit. Feel ready? Press any key to start the game.");
+            _firstStart = false;
+            return;
+        }
+
+
         map.Initialize();
 
         PlaceGameObjects();
@@ -179,7 +192,10 @@ public sealed class GameEngine
             }
         });
         // Place the interactable game objects on the map with a random position where no other object is placed
-        List<GameObject> arrayOfInteractableGameObjects = gameObjects.FindAll(x => x.Type == GameObjectType.InteractableGameObject);
+        List<GameObject> arrayOfInteractableGameObjects =
+            (from gameObject in gameObjects
+             where gameObject.Type == GameObjectType.InteractableGameObject
+             select gameObject).ToList();
         foreach (GameObject obj in arrayOfInteractableGameObjects)
         {
             if (obj.PosX == 0 && obj.PosY == 0)
@@ -190,7 +206,10 @@ public sealed class GameEngine
             map.Set(obj);
         }
         // Place the player on the map
-        _player = gameObjects.Find(x => x.Type == GameObjectType.Player);
+        _player =
+            (from gameObject in gameObjects
+            where gameObject.Type == GameObjectType.Player
+            select gameObject).FirstOrDefault();
         map.Set(_player);
     }
 
@@ -258,9 +277,15 @@ public sealed class GameEngine
             string res = Console.ReadLine();
             Console.WriteLine(new string('+', borderLength + 4));
             bool correct = CheckCode(res);
-            if (correct)
+            if (correct && nextRoomAvailable())
             {
-                SetDialogMessage("output", "Correct! The door is now open.");
+                _currentRoom++;
+                SetDialogMessage("output", "Correct! You have escaped the room! Press ENTER to continue.");
+                Setup();
+            }
+            else if (correct && !nextRoomAvailable())
+            {
+                SetDialogMessage("output", "Correct! You have escaped the last room! You have won the game! Press ENTER to exit.");
                 won = true;
             }
             else
@@ -273,9 +298,17 @@ public sealed class GameEngine
         }
     }
 
+    private bool nextRoomAvailable()
+    {
+        return _currentRoom < _amountOfRooms;
+    }
+
     private bool CheckCode(string code)
     {
-        List<GameObject> arrayOfInteractableGameObjects = gameObjects.FindAll(x => x.Type == GameObjectType.InteractableGameObject);
+        List<GameObject> arrayOfInteractableGameObjects =
+            (from gameObject in gameObjects
+             where gameObject.Type == GameObjectType.InteractableGameObject
+             select gameObject).ToList();
         if (code.Length == arrayOfInteractableGameObjects.Count)
         {
             for (int i = 0; i < arrayOfInteractableGameObjects.Count; i++)
@@ -300,9 +333,15 @@ public sealed class GameEngine
         Map map = GameEngine.Instance.GetMap();
         Random random = new Random();
         // Get Exit
-        GameObject exitObject = gameObjects.Find(x => x.Type == GameObjectType.Exit);
+        GameObject exitObject =
+            (from gameObject in gameObjects
+            where gameObject.Type == GameObjectType.Exit
+            select gameObject).FirstOrDefault();
         // Get Player
-        GameObject playerObject = gameObjects.Find(x => x.Type == GameObjectType.Player);
+        GameObject playerObject =
+            (from gameObject in gameObjects
+            where gameObject.Type == GameObjectType.Player
+            select gameObject).FirstOrDefault();;
         // Get Positions Around Exit
         List<(int, int)> positionsAroundExit = GetPositionsAroundObject(exitObject);
         // Get Positions Around Player
@@ -361,9 +400,15 @@ public sealed class GameEngine
                                 obstacle.Color = ConsoleColor.White;
 
                                 // Get Exit
-                                GameObject exitObject = gameObjects.Find(x => x.Type == GameObjectType.Exit);
+                                GameObject exitObject =
+                                    (from gameObject in gameObjects
+                                    where gameObject.Type == GameObjectType.Exit
+                                    select gameObject).FirstOrDefault();;
                                 // Get Player
-                                GameObject playerObject = gameObjects.Find(x => x.Type == GameObjectType.Player);
+                                GameObject playerObject =
+                                    (from gameObject in gameObjects
+                                    where gameObject.Type == GameObjectType.Player
+                                    select gameObject).FirstOrDefault();;
                                 // Get Positions Around Exit
                                 List<(int, int)> positionsAroundExit = GetPositionsAroundObject(exitObject);
                                 // Get Positions Around Player
