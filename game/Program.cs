@@ -1,9 +1,14 @@
-﻿using libs;
+﻿using System;
+using libs;
 
 class Program
 {
     static void Main(string[] args)
     {
+        // Display the main menu
+        Menu menu = new Menu();
+        menu.DisplayMenu();
+
         //Setup
         Console.CursorVisible = false;
         var engine = GameEngine.Instance;
