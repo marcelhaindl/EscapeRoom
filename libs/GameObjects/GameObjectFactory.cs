@@ -12,35 +12,28 @@ namespace libs
                 Console.WriteLine("Invalid game object data");
                 return null; // Return null if the object is null
             }
-
-            // Initialize a new GameObject instance
-            GameObject newObj = new GameObject();
+            
             // Retrieve the type of the game object
             int type = (int)obj.Type;
 
-            // Create specific game object types based on the type value
-            switch (type)
+
+            GameObject newObj = type switch
             {
-                case (int)GameObjectType.Player:
-                    // Create a Player object from the dynamic object
-                    newObj = obj.ToObject<Player>();
-                    break;
-                case (int)GameObjectType.Obstacle:
-                    // Create an Obstacle object from the dynamic object
-                    newObj = obj.ToObject<Obstacle>();
-                    break;
-                case (int)GameObjectType.InteractableGameObject:
-                    // Create an InteractableGameObject object from the dynamic object
-                    newObj = obj.ToObject<InteractableGameObject>();
-                    break;
-                case (int)GameObjectType.Exit:
-                    // Create an Exit object from the dynamic object
-                    newObj = obj.ToObject<Exit>();
-                    break;
-                default:
-                    // Handle unknown game object types
-                    Console.WriteLine("Unknown GameObject type");
-                    return null; // Return null for unknown types
+                // Create a Player object from the dynamic object
+                (int)GameObjectType.Player => obj.ToObject<Player>(),
+                // Create an Obstacle object from the dynamic object
+                (int)GameObjectType.Obstacle => obj.ToObject<Obstacle>(),
+                // Create an InteractableGameObject object from the dynamic object
+                (int)GameObjectType.InteractableGameObject => obj.ToObject<InteractableGameObject>(),
+                // Create an Exit object from the dynamic object
+                (int)GameObjectType.Exit => obj.ToObject<Exit>(),
+                _ => null // Default case for unknown game object types, returns null for unknown types
+            };
+
+            if (newObj == null)
+            {
+                // Handle unknown game object types
+                Console.WriteLine("Unknown GameObject type");
             }
 
             // Return the created game object
