@@ -12,13 +12,13 @@ namespace libs
     {
         private static GameEngine? _instance; // Singleton instance of the GameEngine
         private IGameObjectFactory gameObjectFactory; // Factory to create game objects
-        private string _dialogMessage = "Hello you, welcome to Escape Room! Complete the code within the time limit to escape! Use the arrow keys to move. Press q to quit."; // Default dialog message
+        private string _dialogMessage = "Welcome to Escape Room! Complete the code within the time limit to escape! Use the arrow keys to move. Press q to quit."; // Default dialog message
         private string _type = "output"; // Type of dialog message
         public bool won = false; // Flag indicating if the player has won
         private int _remainingTimeInSeconds = 300; // Remaining time in seconds
         public Thread timerThread; // Thread for the countdown timer
         private bool _firstStart = true; // Flag indicating the first start of the game
-        private int _amountOfRooms = 2; // Number of rooms/levels in the game
+        private int _TotNumberOfRooms = 2; // Number of rooms/levels in the game
         private int _currentRoom = 1; // Current room/level the player is in
         public bool timerStarted = false; // Flag indicating if the timer has started
 
@@ -328,7 +328,7 @@ namespace libs
         // Method to check if next room is available
         private bool nextRoomAvailable()
         {
-            return _currentRoom < _amountOfRooms;
+            return _currentRoom < _TotNumberOfRooms;
         }
 
         // Method to check the correctness of the code
