@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj": {}
+    "C:\\Users\\Mesza\\OneDrive\\Desktop\\EscapeRoom\\libs\\libs.csproj": {}
   },
   "projects": {
-    "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj": {
+    "C:\\Users\\Mesza\\OneDrive\\Desktop\\EscapeRoom\\libs\\libs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj",
+        "projectUniqueName": "C:\\Users\\Mesza\\OneDrive\\Desktop\\EscapeRoom\\libs\\libs.csproj",
         "projectName": "libs",
-        "projectPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\libs.csproj",
-        "packagesPath": "C:\\Users\\Haind\\.nuget\\packages\\",
-        "outputPath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\libs\\obj\\",
+        "projectPath": "C:\\Users\\Mesza\\OneDrive\\Desktop\\EscapeRoom\\libs\\libs.csproj",
+        "packagesPath": "C:\\Users\\Mesza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mesza\\OneDrive\\Desktop\\EscapeRoom\\libs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Haind\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Mesza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "QbCwYi3yFfXQaYR3XwZIxMisT9Cuq+Fndmte50E87E3gqrIUp5B2BA2hPggcSd283kzmL6439zUoExhAeMHQgg==",
+  "dgSpecHash": "ldFvTr/2nivPeEai0rpBGeorXt068jEpvPjnHTB7BnD129Jk6AFqqGkIwFp1OK9C7Y9YAGdx3lmZIg8QhMAUGQ==",
   "success": true,
-  "projectFilePath": "D:\\fhstp\\04_ss24\\csharp_development\\EscapeRoom\\game\\EscapeRoom.csproj",
+  "projectFilePath": "C:\\Users\\Mesza\\OneDrive\\Desktop\\EscapeRoom\\game\\EscapeRoom.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Haind\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Mesza\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
