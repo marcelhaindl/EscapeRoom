@@ -1,9 +1,14 @@
-namespace libs;
-
-public class Floor : GameObject {
-
-    public Floor () : base(){
-        Type = GameObjectType.Floor;
-        CharRepresentation = '.';
+namespace libs
+{
+    // Floor class inheriting from GameObject
+    public class Floor : GameObject
+    {
+        // Constructor
+        public Floor() : base()
+        {
+            // Set type and character representation
+            Type = GameObjectType.Floor;
+            CharRepresentation = '.';
+        }
     }
 }

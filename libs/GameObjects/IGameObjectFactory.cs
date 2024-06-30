@@ -1,6 +1,9 @@
-namespace libs;
-
-public interface IGameObjectFactory
+namespace libs
 {
-    public GameObject CreateGameObject(dynamic obj);
+    // Interface defining a factory for creating GameObject instances
+    public interface IGameObjectFactory
+    {
+        // Method to create a GameObject from a dynamic object
+        public GameObject CreateGameObject(dynamic obj);
+    }
 }

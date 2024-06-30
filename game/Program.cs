@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        //Setup
+        // Setup
         Console.CursorVisible = false;
         var engine = GameEngine.Instance;
         var inputHandler = InputHandler.Instance;

@@ -1,9 +1,15 @@
-namespace libs;
-
-public class Exit : GameObject {
-    public Exit () : base(){
-        Type = GameObjectType.Exit;
-        CharRepresentation = '█';
-        Color = ConsoleColor.Red;
+namespace libs
+{
+    // Exit class inheriting from GameObject
+    public class Exit : GameObject
+    {
+        // Constructor
+        public Exit() : base()
+        {
+            // Set type, character representation, and color
+            Type = GameObjectType.Exit;
+            CharRepresentation = '█';
+            Color = ConsoleColor.Red;
+        }
     }
 }

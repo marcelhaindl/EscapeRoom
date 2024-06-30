@@ -7,18 +7,19 @@ namespace libs;
 
 public sealed class GameEngine
 {
-    private static GameEngine? _instance;
-    private IGameObjectFactory gameObjectFactory;
-    private string _dialogMessage = "Hello you, welcome to Escape Room! Complete the code within the time limit to escape! Use the arrow keys to move. Press q to quit.";
-    private string _type = "output";
-    public bool won = false;
-    private int _remainingTimeInSeconds = 300;
-    public Thread timerThread;
-    private bool _firstStart = true;
-    private int _amountOfRooms = 2; // change the number to adjust the amount of levels
-    private int _currentRoom = 1;
-    public bool timerStarted = false;
+    private static GameEngine? _instance; // Singleton instance of the GameEngine
+    private IGameObjectFactory gameObjectFactory; // Factory to create game objects
+    private string _dialogMessage = "Hello you, welcome to Escape Room! Complete the code within the time limit to escape! Use the arrow keys to move. Press q to quit."; // Default dialog message
+    private string _type = "output"; // Type of dialog message
+    public bool won = false; // Flag indicating if the player has won
+    private int _remainingTimeInSeconds = 300; // Remaining time in seconds
+    public Thread timerThread; // Thread for the countdown timer
+    private bool _firstStart = true; // Flag indicating the first start of the game
+    private int _amountOfRooms = 2; // Number of rooms/levels in the game
+    private int _currentRoom = 1; // Current room/level the player is in
+    public bool timerStarted = false; // Flag indicating if the timer has started
 
+    // Singleton pattern implementation
     public static GameEngine Instance
     {
         get
@@ -31,54 +32,61 @@ public sealed class GameEngine
         }
     }
 
+    // Private constructor to prevent external instantiation
     private GameEngine()
     {
-        // INIT PROPS HERE IF NEEDED
-        gameObjectFactory = new GameObjectFactory();
-        timerThread = new Thread(CountdownTimer);
+        gameObjectFactory = new GameObjectFactory(); // Initialize the game object factory
+        timerThread = new Thread(CountdownTimer); // Initialize the countdown timer thread
     }
 
-    private GameObject? _player;
+    private GameObject? _player; // Reference to the player object
 
-    private Map map = new Map();
+    private Map map = new Map(); // Map of the game
 
-    private List<GameObject> gameObjects = new List<GameObject>();
+    private List<GameObject> gameObjects = new List<GameObject>(); // List of game objects
 
+    // Get the map of the game
     public Map GetMap()
     {
         return map;
     }
 
+    // Clear the list of game objects
     public void ClearGameObjects()
     {
         gameObjects.Clear();
     }
 
+    // Get the player object
     public GameObject GetPlayer()
     {
         return _player;
     }
 
+    // Set the dialog message
     public void SetDialogMessage(string type, string message)
     {
         _type = type;
         _dialogMessage = message;
     }
+
+    // Get the dialog message
     public string GetDialogMessage()
     {
         return _dialogMessage;
     }
 
+    // Setup the game environment and initialize objects
     public void Setup()
     {
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        Console.OutputEncoding = System.Text.Encoding.UTF8; // Set console encoding to UTF-8
         Console.WriteLine("Setting up game...");
 
         try
         {
-            ClearGameObjects();
+            ClearGameObjects(); // Clear existing game objects
 
-            // Correct usage of static class method
+            // Read game data from a JSON file
             dynamic gameData = FileHandler.ReadJson();
 
             if (gameData == null)
@@ -87,26 +95,27 @@ public sealed class GameEngine
                 return;
             }
 
+            // Set map dimensions
             map.MapWidth = gameData.map.width;
             map.MapHeight = gameData.map.height;
 
+            // Create and add the player object
             dynamic player = gameData.player;
-
             player.Type = GameObjectType.Player;
-
             AddGameObject(CreateGameObject(player));
 
+            // Create and add wall objects
             foreach (var wall in gameData.walls)
             {
                 wall.Type = GameObjectType.Obstacle;
                 AddGameObject(CreateGameObject(wall));
             }
 
-            GenerateExit();
+            GenerateExit(); // Generate the exit object
 
+            // Shuffle and add interactable game objects
             int lengthOfInteractableGameObjects = gameData.interactableGameObjects.Count;
             List<int> shuffledIndexArray = ShuffleIndexArray(lengthOfInteractableGameObjects).ToList();
-
             foreach (var interactableGameObject in gameData.interactableGameObjects)
             {
                 interactableGameObject.Type = GameObjectType.InteractableGameObject;
@@ -114,9 +123,10 @@ public sealed class GameEngine
                 AddGameObject(CreateGameObject(interactableGameObject));
             }
 
+            // Set remaining time based on the number of interactable objects
             _remainingTimeInSeconds = lengthOfInteractableGameObjects * 30;
 
-            GenerateObstacles();
+            GenerateObstacles(); // Generate random obstacles
 
             if (_player == null)
             {
@@ -126,10 +136,10 @@ public sealed class GameEngine
         catch (Exception ex)
         {
             Console.WriteLine($"An error occurred during setup: {ex.Message}");
-
         }
     }
 
+    // Render the game state to the console
     public void Render()
     {
         Console.Clear();
@@ -141,12 +151,11 @@ public sealed class GameEngine
             return;
         }
 
+        map.Initialize(); // Initialize the map
 
-        map.Initialize();
+        PlaceGameObjects(); // Place game objects on the map
 
-        PlaceGameObjects();
-
-        //Render the map
+        // Render the map
         for (int i = 0; i < map.MapHeight; i++)
         {
             for (int j = 0; j < map.MapWidth; j++)
@@ -156,34 +165,30 @@ public sealed class GameEngine
             Console.WriteLine();
         }
         Console.WriteLine();
-        if (_remainingTimeInSeconds < 10)
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-        }
-        else
-        {
-            Console.ForegroundColor = ConsoleColor.White;
-        }
+
+        // Display remaining time
+        Console.ForegroundColor = _remainingTimeInSeconds < 10 ? ConsoleColor.Red : ConsoleColor.White;
         Console.WriteLine("Time Remaining: {0}:{1:00}", _remainingTimeInSeconds / 60, _remainingTimeInSeconds % 60);
         Console.WriteLine();
         DrawDialog(_type, _dialogMessage);
     }
 
-
-    // Method to create GameObject using the factory from clients
+    // Method to create a GameObject using the factory
     public GameObject CreateGameObject(dynamic obj)
     {
         return gameObjectFactory.CreateGameObject(obj);
     }
 
+    // Add a game object to the list
     public void AddGameObject(GameObject gameObject)
     {
         gameObjects.Add(gameObject);
     }
 
+    // Place game objects on the map
     private void PlaceGameObjects()
     {
-        // Loop through all game objects and place them on the map
+        // Place non-interactable objects
         gameObjects.ForEach(delegate (GameObject obj)
         {
             if (obj.Type != GameObjectType.InteractableGameObject)
@@ -191,11 +196,9 @@ public sealed class GameEngine
                 map.Set(obj);
             }
         });
-        // Place the interactable game objects on the map with a random position where no other object is placed
-        List<GameObject> arrayOfInteractableGameObjects =
-            (from gameObject in gameObjects
-             where gameObject.Type == GameObjectType.InteractableGameObject
-             select gameObject).ToList();
+
+        // Place interactable objects at random positions
+        List<GameObject> arrayOfInteractableGameObjects = gameObjects.Where(gameObject => gameObject.Type == GameObjectType.InteractableGameObject).ToList();
         foreach (GameObject obj in arrayOfInteractableGameObjects)
         {
             if (obj.PosX == 0 && obj.PosY == 0)
@@ -205,14 +208,13 @@ public sealed class GameEngine
             }
             map.Set(obj);
         }
+
         // Place the player on the map
-        _player =
-            (from gameObject in gameObjects
-            where gameObject.Type == GameObjectType.Player
-            select gameObject).FirstOrDefault();
+        _player = gameObjects.FirstOrDefault(gameObject => gameObject.Type == GameObjectType.Player);
         map.Set(_player);
     }
 
+    // Draw an object on the console
     private void DrawObject(GameObject gameObject)
     {
         Console.ResetColor();
@@ -222,7 +224,6 @@ public sealed class GameEngine
             Console.ForegroundColor = gameObject.Color;
             Console.Write(gameObject.CharRepresentation);
         }
-
         else
         {
             Console.ForegroundColor = ConsoleColor.Gray;
@@ -230,14 +231,14 @@ public sealed class GameEngine
         }
     }
 
+    // Draw dialog messages on the console
     private void DrawDialog(string type, string message)
     {
         int messageLength = message.Length;
         int borderLength = 38;
-        int totalHeight = 5 + (messageLength / borderLength) * 2;
 
+        // Calculate the total height of the dialog box
         Console.WriteLine(new string('+', borderLength + 4));
-
         Console.WriteLine(string.Format("+ {0,-" + borderLength + "} +", ""));
 
         int startIndex = 0;
@@ -264,7 +265,6 @@ public sealed class GameEngine
         }
 
         Console.WriteLine(string.Format("+ {0,-" + borderLength + "} +", ""));
-
         Console.WriteLine(new string('+', borderLength + 4));
 
         if (type == "input")
@@ -292,23 +292,21 @@ public sealed class GameEngine
             {
                 SetDialogMessage("output", "Incorrect! Try again. Press ENTER to continue.");
                 won = false;
-
             }
             Render();
         }
     }
 
+    // Check if the next room is available
     private bool nextRoomAvailable()
     {
         return _currentRoom < _amountOfRooms;
     }
 
+    // Check if the provided code is correct
     private bool CheckCode(string code)
     {
-        List<GameObject> arrayOfInteractableGameObjects =
-            (from gameObject in gameObjects
-             where gameObject.Type == GameObjectType.InteractableGameObject
-             select gameObject).ToList();
+        List<GameObject> arrayOfInteractableGameObjects = gameObjects.Where(gameObject => gameObject.Type == GameObjectType.InteractableGameObject).ToList();
         if (code.Length == arrayOfInteractableGameObjects.Count)
         {
             for (int i = 0; i < arrayOfInteractableGameObjects.Count; i++)
@@ -327,24 +325,18 @@ public sealed class GameEngine
         }
     }
 
-
+    // Get a random position on the map
     private (int x, int y) getRandomPosition()
     {
         Map map = GameEngine.Instance.GetMap();
         Random random = new Random();
-        // Get Exit
-        GameObject exitObject =
-            (from gameObject in gameObjects
-            where gameObject.Type == GameObjectType.Exit
-            select gameObject).FirstOrDefault();
-        // Get Player
-        GameObject playerObject =
-            (from gameObject in gameObjects
-            where gameObject.Type == GameObjectType.Player
-            select gameObject).FirstOrDefault();;
-        // Get Positions Around Exit
+
+        // Get the exit and player objects
+        GameObject exitObject = gameObjects.FirstOrDefault(gameObject => gameObject.Type == GameObjectType.Exit);
+        GameObject playerObject = gameObjects.FirstOrDefault(gameObject => gameObject.Type == GameObjectType.Player);
+
+        // Get positions around the exit and player
         List<(int, int)> positionsAroundExit = GetPositionsAroundObject(exitObject);
-        // Get Positions Around Player
         List<(int, int)> positionsAroundPlayer = GetPositionsAroundObject(playerObject);
 
         int xPosition = random.Next(1, map.MapWidth - 1);
@@ -357,6 +349,7 @@ public sealed class GameEngine
         return (xPosition, yPosition);
     }
 
+    // Shuffle an array of indices
     private int[] ShuffleIndexArray(int n)
     {
         if (n <= 1)
@@ -370,7 +363,7 @@ public sealed class GameEngine
         return numbers;
     }
 
-    // Function that randomly generates small blocks of 2x2, 2x3, 3x2, 3x3, 4,2, 4x3, 4x4, 2x4, or 3x4 of obstacles on the map
+    // Generate random obstacles on the map
     public void GenerateObstacles()
     {
         Random random = new Random();
@@ -381,10 +374,10 @@ public sealed class GameEngine
         {
             for (int j = 0; j < mapWidth; j++)
             {
-                if (random.Next(0, 100) < 5) // Percentage chance of generating an obstacle
+                if (random.Next(0, 100) < 5) // 5% chance of generating an obstacle
                 {
-                    int obstacleWidth = random.Next(1, 3);  // Width of an obstacle
-                    int obstacleHeight = random.Next(1, 3); // Height of an obstacle
+                    int obstacleWidth = random.Next(1, 3); // Width of the obstacle
+                    int obstacleHeight = random.Next(1, 3); // Height of the obstacle
 
                     if (i + obstacleHeight < mapHeight && j + obstacleWidth < mapWidth)
                     {
@@ -399,19 +392,12 @@ public sealed class GameEngine
                                 obstacle.CharRepresentation = '█';
                                 obstacle.Color = ConsoleColor.White;
 
-                                // Get Exit
-                                GameObject exitObject =
-                                    (from gameObject in gameObjects
-                                    where gameObject.Type == GameObjectType.Exit
-                                    select gameObject).FirstOrDefault();;
-                                // Get Player
-                                GameObject playerObject =
-                                    (from gameObject in gameObjects
-                                    where gameObject.Type == GameObjectType.Player
-                                    select gameObject).FirstOrDefault();;
-                                // Get Positions Around Exit
+                                // Get the exit and player objects
+                                GameObject exitObject = gameObjects.FirstOrDefault(gameObject => gameObject.Type == GameObjectType.Exit);
+                                GameObject playerObject = gameObjects.FirstOrDefault(gameObject => gameObject.Type == GameObjectType.Player);
+
+                                // Get positions around the exit and player
                                 List<(int, int)> positionsAroundExit = GetPositionsAroundObject(exitObject);
-                                // Get Positions Around Player
                                 List<(int, int)> positionsAroundPlayer = GetPositionsAroundObject(playerObject);
 
                                 // Check if the obstacle is placed around the exit or the player
@@ -420,10 +406,10 @@ public sealed class GameEngine
                                     continue;
                                 }
 
-                                // Remove the object on this certain position
+                                // Remove any object on this position
                                 gameObjects.RemoveAll(obj => obj.PosX == l && obj.PosY == k);
-                                AddGameObject(obstacle);
-                                map.Set(obstacle);
+                                AddGameObject(obstacle); // Add the obstacle to the list
+                                map.Set(obstacle); // Set the obstacle on the map
                             }
                         }
                     }
@@ -432,6 +418,7 @@ public sealed class GameEngine
         }
     }
 
+    // Get positions around a specific object
     private List<(int, int)> GetPositionsAroundObject(GameObject obj)
     {
         List<(int, int)> positions = new List<(int, int)>();
@@ -439,7 +426,7 @@ public sealed class GameEngine
         int x = obj.PosX;
         int y = obj.PosY;
 
-        // Add original position
+        // Add the original position
         positions.Add((x, y));
         // Add positions to the left, right, up, and down of the object
         positions.Add((x - 1, y));
@@ -455,7 +442,7 @@ public sealed class GameEngine
         return positions;
     }
 
-    // Function that randomly creates an exit on one of the four sides of the map and adds the exit to the game objects list
+    // Generate an exit on one of the four sides of the map
     public void GenerateExit()
     {
         Random random = new Random();
@@ -469,6 +456,7 @@ public sealed class GameEngine
         exit.CharRepresentation = '█';
         exit.Color = ConsoleColor.Red;
 
+        // Set the position of the exit based on the chosen side
         switch (side)
         {
             case 0: // Top side
@@ -488,20 +476,24 @@ public sealed class GameEngine
                 exit.PosY = random.Next(1, mapHeight - 1);
                 break;
         }
-        // Remove the object on this certain position
+
+        // Remove any object on this position
         gameObjects.RemoveAll(obj => obj.PosX == exit.PosX && obj.PosY == exit.PosY);
-        AddGameObject(exit);
+        AddGameObject(exit); // Add the exit to the list of game objects
     }
+
+    // Countdown timer function
     private void CountdownTimer()
     {
-        // Write and delete the remaining time every second
+        // Decrement the remaining time every second and render the game state
         while (_remainingTimeInSeconds > 0)
         {
             _remainingTimeInSeconds--;
             Thread.Sleep(1000);
             Render();
         }
-        // If the time is up, the player loses
+
+        // If time is up, display a lose message and exit the game
         if (_remainingTimeInSeconds == 0)
         {
             SetDialogMessage("output", "Time is up! You lose.");
@@ -509,8 +501,6 @@ public sealed class GameEngine
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
             Environment.Exit(0);
-
         }
     }
-
 }
